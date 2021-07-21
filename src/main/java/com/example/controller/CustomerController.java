@@ -18,7 +18,7 @@ public class CustomerController {
 
 	@GetMapping("/hello")
 	String demo1() {
-		return "This is demo 1";
+		return "Hello world";
 	}
 
 	@GetMapping("/customer/{id}")
