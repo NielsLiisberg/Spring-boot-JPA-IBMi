@@ -24,6 +24,8 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	implementation 'javax.validation:validation-api:2.0.1.Final'
+	implementation 'org.projectlombok:lombok:1.18.18'
 	compileOnly 'org.projectlombok:lombok'
 	implementation group: 'net.sf.jt400', name: 'jt400-jdk8', version: '10.6'
 	annotationProcessor 'org.projectlombok:lombok'

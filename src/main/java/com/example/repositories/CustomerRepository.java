@@ -9,6 +9,5 @@ import org.springframework.data.repository.CrudRepository;
 public interface CustomerRepository extends CrudRepository<Customer, Long> , JpaSpecificationExecutor<Customer> {
 
 	// JPQL - Almost SQL but using the entity models:
-	@Query("SELECT c FROM Customer c WHERE upper(lastName) like upper('%' || :lastName || '%') ")
-	public List<Customer> findBySearch(String lastName);
+	@Query("SELECT c FROM Customer c WHERE upper(lastName) like upper('%' || :lastName || '%') ") Iterable<Customer> findBySearch(String lastName);
 }

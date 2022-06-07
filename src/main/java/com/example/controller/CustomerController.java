@@ -36,7 +36,7 @@ public class CustomerController {
 
 	// use case: http://localhost:8888/api/customerSearch?search=john
 	@GetMapping("/customerSearch")
-	List<Customer> getCustomerListSearch(@RequestParam("search") String search) {
+	Iterable<Customer> getCustomerListSearch(@RequestParam("search") String search) {
 		return  customerRepository.findBySearch(search );
 	}
 

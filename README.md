@@ -38,6 +38,8 @@ you can use all the nice names.
 The controller is where you describe your endpoints - the URL you are referring 
 to from your client code.
 
+
+
 ## Try it out 
 
 You have to set environment variables according to your
@@ -49,11 +51,27 @@ HOST=MYIBMI;USERID=MYNAME;PASSWORD=mysecret;PORT=8888;LIBL=QIWS
 
 Then you can start the service. When you open your browser 
 then you can refer to this URL and see if it works:
+
+Now when you start the spring-boot application is listening on port 8888 on you local host.
+
+So first step is to see if the application works:
+
+```http://localhost:8888/api/hello```
+
+If you get a "Hello world" then let's see if the database connections also works:
+
+```http://localhost:8888/api/customerList/```
+
+This will produce the complete list of "customers"
+
+Finally, let's try the JPQL - Java Persistence Query Language defined i the *controler* :
+
 ```
-http://localhost:8888/api/customerSearch?search=
+http://localhost:8888/api/customerSearch?search=john
 ```
-Notice that the logging is set to a level so you can examine what real SQL statements 
+Notice that the logging is being set to a level so you can examine what real SQL statements 
 running against the Db2 database. That ofcause can be changed if you open the **/resources/application.properties**
 and modify the **SQL logging**  tag
+
 
 
