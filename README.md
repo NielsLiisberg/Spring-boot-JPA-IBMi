@@ -56,19 +56,22 @@ Now when you start the spring-boot application is listening on port 8888 on you 
 
 So first step is to see if the application works:
 
-```http://localhost:8888/api/hello```
+http://localhost:8888/api/hello
 
 If you get a "Hello world" then let's see if the database connections also works:
 
-```http://localhost:8888/api/customerList/```
+http://localhost:8888/api/customerList/
 
-This will produce the complete list of "customers"
+This will produce the complete list of "customers".
+
+Now, getting one object as JSON - one customer by id:
+
+http://localhost:8888/api/customer/839283
 
 Finally, let's try the JPQL - Java Persistence Query Language defined i the *controler* :
 
-```
 http://localhost:8888/api/customerSearch?search=john
-```
+
 Notice that the logging is being set to a level so you can examine what real SQL statements 
 running against the Db2 database. That ofcause can be changed if you open the **/resources/application.properties**
 and modify the **SQL logging**  tag
