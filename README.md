@@ -68,7 +68,7 @@ Now, getting one object as JSON - one customer by id:
 
 http://localhost:8888/api/customer/839283
 
-Finally, let's try the JPQL - Java Persistence Query Language defined i the *controler* :
+Finally, let's try the JPQL - Java Persistence Query Language defined i the *controller* :
 
 http://localhost:8888/api/customerSearch?search=john
 
