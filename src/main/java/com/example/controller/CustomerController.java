@@ -1,6 +1,5 @@
 package com.example.controller;
 
-import java.util.List;
 import java.util.Optional;
 
 import com.example.models.Customer;
@@ -22,17 +21,20 @@ public class CustomerController {
 		return "Hello world";
 	}
 
+
+	// use case: http://localhost:8888/api/customer/
+	@GetMapping("/customer/")
+	Iterable<Customer> getCustomerListAll() {
+		return  customerRepository.findAll();
+	}
+
+
 	// use case: http://localhost:8888/api/customer/839283
 	@GetMapping("/customer/{id}")
 	Optional<Customer> getCustomer(@PathVariable("id") Long id) {
 		return customerRepository.findById(id);
 	}
 
-	// use case: http://localhost:8888/api/customerList
-	@GetMapping("/customerList")
-	Iterable<Customer> getCustomerListAll() {
-		return  customerRepository.findAll();
-	}
 
 	// use case: http://localhost:8888/api/customerSearch?search=john
 	@GetMapping("/customerSearch")

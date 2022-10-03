@@ -75,18 +75,18 @@ public class Customer {
 	@NotNull
 	@Size(max = 1)
 	@Column(name="CHGCOD")
-	Integer ChargeCode;
+	Integer chargeCode;
 
 	// Datatype: NUMERIC, name: baldue, fieldLabel: Balance due field, len: 6, prec: 2
 	@NotNull
 	@Size(max = 6)
 	@Column(name="BALDUE")
-	BigDecimal BalanceDue;
+	BigDecimal balanceDue;
 
 	// Datatype: NUMERIC, name: cdtdue, fieldLabel: Credit due field, len: 6, prec: 2
 	@NotNull
 	@Size(max = 6)
 	@Column(name="CDTDUE")
-	BigDecimal CreditDue;
+	BigDecimal creditDue;
 
 }
