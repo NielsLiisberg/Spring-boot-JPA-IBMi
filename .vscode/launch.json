@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Application",
+            "request": "launch",
+            "mainClass": "com.example.Application",
+            "projectName": "customerService",            
+            "env": {
+                "HOST": "MY_IBM_I",
+                "LIBL": "QIWS",
+                "PORT": 8888,
+                "USERID": "userid",
+                "PASSWORD": "password"
+            }
+        }
+    ]
+  }
